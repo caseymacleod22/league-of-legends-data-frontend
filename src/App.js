@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { useEffect, useState} from 'react'
 import './App.css';
+import { getChampionData } from './services/league-api';
 
 function App() {
+
+  const [appdata, setAppData] = useState([])
+
+  async function getAppData() {
+    const data = await getChampionData()
+    setAppData(data.data)
+    console.log(data)
+  }
+
+  useEffect(() => {
+    getAppData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <h1>League of Legends</h1>
+  )
 }
 
 export default App;
