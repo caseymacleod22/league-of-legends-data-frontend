@@ -1,12 +1,18 @@
 const Champions = (props) => {
-    const map = new Map(Object.entries(props.data).forEach(([value]) => console.log(`${value}`)
-    ))
-    return (
-        <div>
-            {map}
-        </div>
-    )
-}
+const championName = Object.keys(props.data)
+console.log(championName)
 
+return (
+    <div>
+        {championName.map((champion) => {
+            return (
+                <div>
+                    {champion}
+                </div>
+            )
+        })}
+    </div>
+)
+}
 
 export default Champions
