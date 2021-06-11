@@ -1,15 +1,16 @@
 import { useEffect, useState} from 'react'
 import './App.css';
 import { getChampionData } from './services/league-api';
+import Champions from './components/Champions/Champions'
 
 function App() {
 
-  const [appdata, setAppData] = useState([])
+  const [appData, setAppData] = useState([])
 
   async function getAppData() {
     const data = await getChampionData()
     setAppData(data.data)
-    console.log(data)
+    // console.log(data)
   }
 
   useEffect(() => {
@@ -17,7 +18,12 @@ function App() {
   }, [])
 
   return (
-    <h1>League of Legends</h1>
+    <div>
+      <h1>League of Legends</h1>
+      <div>
+        <Champions data={appData}/>
+      </div>
+    </div>
   )
 }
 
