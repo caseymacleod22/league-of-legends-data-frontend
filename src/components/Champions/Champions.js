@@ -1,16 +1,29 @@
 const Champions = (props) => {
-    const champion = Object.keys(props.data)
-    console.log(champion)
+    let championArr = []
+
+    for (const key in props.data) {
+        let champion = props.data[key].name
+        championArr.push(champion)
+    }
+        console.log(championArr)
+
+
+        // console.log(championArr)
 
     return (
         <div>
-            {champion.map((champs) => {
+            {championArr.map((champ) => {
                 return (
-                    <div>{champs}</div>
+                    <div>{champ}</div>
                 )
             })}
         </div>
-        )
+    )
+
+    // const champion = Object.keys(props.data)
+    // console.log(champion)
+
+
 
     }
 // const Champions = (props) => {
