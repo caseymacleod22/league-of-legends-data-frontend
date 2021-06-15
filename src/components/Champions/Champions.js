@@ -1,20 +1,18 @@
 const Champions = (props) => {
-const championName = []
-for (let i in props.data) {
-    championName.push([i, props.data [i]])
-}
+    const champion = Object.keys(props.data)
+    console.log(champion)
 
-return (
-    <div>
-        {championName.map((champion) => {
-            return (
-                <div>{champion.name}</div>
-            )
-        })}
-    </div>
-)
-}
+    return (
+        <div>
+            {champion.map((champs) => {
+                return (
+                    <div>{champs}</div>
+                )
+            })}
+        </div>
+        )
 
+    }
 // const Champions = (props) => {
 //     const champion = JSON.parse(props.data)
 //     console.log(champion)
