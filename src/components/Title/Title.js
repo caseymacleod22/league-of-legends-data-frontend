@@ -1,16 +1,14 @@
 const Title = (props) => {
-    const championTitle = Object.keys(props.data)
-    console.log(championTitle)
+    let titleArr = []
+    
+    for (const key in props.data) {
+        let champTitle = props.data[key].title
+        console.log(champTitle)
+    }
     
     return (
         <div>
-            {championTitle.map((champion) => {
-                return (
-                    <div>
-                        {champion}
-                    </div>
-                )
-            })}
+
         </div>
     )
     }
