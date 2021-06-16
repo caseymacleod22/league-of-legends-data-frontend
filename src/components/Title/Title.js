@@ -3,12 +3,19 @@ const Title = (props) => {
     
     for (const key in props.data) {
         let champTitle = props.data[key].title
+        titleArr.push(champTitle)
         console.log(champTitle)
     }
     
     return (
         <div>
-
+            {titleArr.map((t) => {
+                return (
+                    <div>
+                        {t}
+                    </div>
+                )
+            })}
         </div>
     )
     }
