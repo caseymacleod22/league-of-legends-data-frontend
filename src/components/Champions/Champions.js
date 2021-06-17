@@ -8,7 +8,7 @@ const Champions = (props) => {
         // console.log(championArr)
 
     return (
-        <div>
+        <div id='championnames'>
             {championArr.map((champ) => {
                 return (
                     <div>{champ} </div>
