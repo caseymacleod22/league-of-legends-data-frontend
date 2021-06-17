@@ -5,7 +5,7 @@ const Champions = (props) => {
         let champion = props.data[key].name
         championArr.push(champion)
     }
-        console.log(championArr)
+        // console.log(championArr)
 
     return (
         <div>

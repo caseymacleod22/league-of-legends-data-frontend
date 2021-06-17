@@ -4,7 +4,7 @@ const Title = (props) => {
     for (const key in props.data) {
         let champTitle = props.data[key].title
         titleArr.push(champTitle)
-        console.log(champTitle)
+        // console.log(champTitle)
     }
     
     return (
