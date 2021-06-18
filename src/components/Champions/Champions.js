@@ -1,3 +1,5 @@
+import Title from '../Title/Title'
+
 const Champions = (props) => {
     let championArr = []
 
@@ -11,7 +13,10 @@ const Champions = (props) => {
         <div id='championnames'>
             {championArr.map((champ) => {
                 return (
+                <div>
                     <div>{champ} </div>
+                    <Title/>
+                </div>
                 )
             })}
         </div>
