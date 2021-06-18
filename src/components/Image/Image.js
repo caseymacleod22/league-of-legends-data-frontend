@@ -4,9 +4,9 @@ const Image = (props) => {
 
     for (const key in props.data) {
         let champImg = props.data[key].image.full
-        // imgArr.push(champImg)
-        console.log(champImg)
+        imgArr.push(champImg)
     }
+    console.log(imgArr)
     
     
     return (
