@@ -8,7 +8,7 @@ const Title = (props) => {
     }
     
     return (
-        <div>
+        <div id='championtitle'>
             {titleArr.map((t) => {
                 return (
                     <div>
