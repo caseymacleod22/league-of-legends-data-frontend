@@ -1,18 +1,10 @@
 const Champions = (props) => {
     let championArr = []
-    let titleArr = []
 
     for (const key in props.data) {
         let champion = props.data[key].name
         championArr.push(champion)
     }
-
-    for (const key in props.data) {
-        let champTitle = props.data[key].title
-        titleArr.push(champTitle)
-    }
-        // console.log(championArr)
-        console.log(titleArr)
 
     return (
         <div id='championnames'>
@@ -23,13 +15,6 @@ const Champions = (props) => {
                 </div>
                 )
             })}
-            <div>
-                {titleArr.map((t) => {
-                    return (
-                        <div>{t}</div>
-                    )
-                })}
-            </div>
         </div>
     )
 
