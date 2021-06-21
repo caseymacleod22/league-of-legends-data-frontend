@@ -3,7 +3,7 @@ import './App.css';
 import { getChampionData } from './services/league-api';
 import Champions from './components/Champions/Champions'
 import Title from './components/Title/Title'
-import Image from './components/Image/Image'
+// import Image from './components/Image/Image'
 
 function App() {
 
@@ -24,8 +24,8 @@ function App() {
       <h1>League of Legends</h1>
       <div>
         <Champions data={appData}/>
-        <Title data={appData} />
-        <Image data={appData} />
+        {/* <Title data={appData} /> */}
+        {/* <Image data={appData} /> */}
       </div>
     </div>
   )
