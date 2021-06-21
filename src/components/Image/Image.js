@@ -6,7 +6,7 @@ const Image = (props) => {
         let champImg = props.data[key].image.full
         imgArr.push(champImg)
     }
-    console.log(imgArr)
+    // console.log(imgArr)
     
     
     return (
