@@ -11,7 +11,9 @@ const Champions = (props) => {
             {championArr.map((champ) => {
                 return (
                 <div>
-                    <div>{champ} </div>
+                    <div>
+                        <a href="">{champ}</a> 
+                    </div>
                 </div>
                 )
             })}
